@@ -16,6 +16,8 @@
 		BD0BD4662AE00D61004E1DD4 /* TestDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD4652AE00D61004E1DD4 /* TestDemoTests.swift */; };
 		BD0BD4702AE00D61004E1DD4 /* TestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD46F2AE00D61004E1DD4 /* TestDemoUITests.swift */; };
 		BD0BD4722AE00D61004E1DD4 /* TestDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD4712AE00D61004E1DD4 /* TestDemoUITestsLaunchTests.swift */; };
+		BD0BD47F2AE00D79004E1DD4 /* InputsValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD47E2AE00D79004E1DD4 /* InputsValidationHelper.swift */; };
+		BD0BD4812AE00D9A004E1DD4 /* InputsValidationHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD4802AE00D9A004E1DD4 /* InputsValidationHelperTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		BD0BD46B2AE00D61004E1DD4 /* TestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0BD46F2AE00D61004E1DD4 /* TestDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDemoUITests.swift; sourceTree = "<group>"; };
 		BD0BD4712AE00D61004E1DD4 /* TestDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BD0BD47E2AE00D79004E1DD4 /* InputsValidationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputsValidationHelper.swift; sourceTree = "<group>"; };
+		BD0BD4802AE00D9A004E1DD4 /* InputsValidationHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputsValidationHelperTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				BD0BD4572AE00D61004E1DD4 /* Assets.xcassets */,
 				BD0BD4592AE00D61004E1DD4 /* LaunchScreen.storyboard */,
 				BD0BD45C2AE00D61004E1DD4 /* Info.plist */,
+				BD0BD47E2AE00D79004E1DD4 /* InputsValidationHelper.swift */,
 			);
 			path = TestDemo;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0BD4652AE00D61004E1DD4 /* TestDemoTests.swift */,
+				BD0BD4802AE00D9A004E1DD4 /* InputsValidationHelperTest.swift */,
 			);
 			path = TestDemoTests;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0BD4532AE00D5F004E1DD4 /* ViewController.swift in Sources */,
+				BD0BD47F2AE00D79004E1DD4 /* InputsValidationHelper.swift in Sources */,
 				BD0BD44F2AE00D5F004E1DD4 /* AppDelegate.swift in Sources */,
 				BD0BD4512AE00D5F004E1DD4 /* SceneDelegate.swift in Sources */,
 			);
@@ -268,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0BD4812AE00D9A004E1DD4 /* InputsValidationHelperTest.swift in Sources */,
 				BD0BD4662AE00D61004E1DD4 /* TestDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
