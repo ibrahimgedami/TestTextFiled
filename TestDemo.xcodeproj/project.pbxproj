@@ -18,6 +18,10 @@
 		BD0BD4722AE00D61004E1DD4 /* TestDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD4712AE00D61004E1DD4 /* TestDemoUITestsLaunchTests.swift */; };
 		BD0BD47F2AE00D79004E1DD4 /* InputsValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD47E2AE00D79004E1DD4 /* InputsValidationHelper.swift */; };
 		BD0BD4812AE00D9A004E1DD4 /* InputsValidationHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD4802AE00D9A004E1DD4 /* InputsValidationHelperTest.swift */; };
+		BD3372C72B3DB69F0032A602 /* MySwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3372C62B3DB69F0032A602 /* MySwiftUIView.swift */; };
+		BD3372CA2B3DB6CF0032A602 /* MonthsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3372C92B3DB6CF0032A602 /* MonthsModel.swift */; };
+		BD5FA35B2B218F20002BEBCD /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5FA3592B218F20002BEBCD /* TestViewController.swift */; };
+		BD5FA35C2B218F20002BEBCD /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5FA35A2B218F20002BEBCD /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		BD0BD4712AE00D61004E1DD4 /* TestDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BD0BD47E2AE00D79004E1DD4 /* InputsValidationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputsValidationHelper.swift; sourceTree = "<group>"; };
 		BD0BD4802AE00D9A004E1DD4 /* InputsValidationHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputsValidationHelperTest.swift; sourceTree = "<group>"; };
+		BD3372C62B3DB69F0032A602 /* MySwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySwiftUIView.swift; sourceTree = "<group>"; };
+		BD3372C92B3DB6CF0032A602 /* MonthsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthsModel.swift; sourceTree = "<group>"; };
+		BD5FA3592B218F20002BEBCD /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BD5FA35A2B218F20002BEBCD /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +111,18 @@
 		BD0BD44D2AE00D5F004E1DD4 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD3372C82B3DB6BF0032A602 /* Model */,
 				BD0BD44E2AE00D5F004E1DD4 /* AppDelegate.swift */,
 				BD0BD4502AE00D5F004E1DD4 /* SceneDelegate.swift */,
+				BD3372C62B3DB69F0032A602 /* MySwiftUIView.swift */,
 				BD0BD4522AE00D5F004E1DD4 /* ViewController.swift */,
 				BD0BD4542AE00D5F004E1DD4 /* Main.storyboard */,
 				BD0BD4572AE00D61004E1DD4 /* Assets.xcassets */,
 				BD0BD4592AE00D61004E1DD4 /* LaunchScreen.storyboard */,
 				BD0BD45C2AE00D61004E1DD4 /* Info.plist */,
 				BD0BD47E2AE00D79004E1DD4 /* InputsValidationHelper.swift */,
+				BD5FA3592B218F20002BEBCD /* TestViewController.swift */,
+				BD5FA35A2B218F20002BEBCD /* TestViewController.xib */,
 			);
 			path = TestDemo;
 			sourceTree = "<group>";
@@ -131,6 +143,14 @@
 				BD0BD4712AE00D61004E1DD4 /* TestDemoUITestsLaunchTests.swift */,
 			);
 			path = TestDemoUITests;
+			sourceTree = "<group>";
+		};
+		BD3372C82B3DB6BF0032A602 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD3372C92B3DB6CF0032A602 /* MonthsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +259,7 @@
 			files = (
 				BD0BD45B2AE00D61004E1DD4 /* LaunchScreen.storyboard in Resources */,
 				BD0BD4582AE00D61004E1DD4 /* Assets.xcassets in Resources */,
+				BD5FA35C2B218F20002BEBCD /* TestViewController.xib in Resources */,
 				BD0BD4562AE00D5F004E1DD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,10 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3372C72B3DB69F0032A602 /* MySwiftUIView.swift in Sources */,
+				BD5FA35B2B218F20002BEBCD /* TestViewController.swift in Sources */,
 				BD0BD4532AE00D5F004E1DD4 /* ViewController.swift in Sources */,
 				BD0BD47F2AE00D79004E1DD4 /* InputsValidationHelper.swift in Sources */,
 				BD0BD44F2AE00D5F004E1DD4 /* AppDelegate.swift in Sources */,
 				BD0BD4512AE00D5F004E1DD4 /* SceneDelegate.swift in Sources */,
+				BD3372CA2B3DB6CF0032A602 /* MonthsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
