@@ -22,6 +22,10 @@
 		BD3372CA2B3DB6CF0032A602 /* MonthsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3372C92B3DB6CF0032A602 /* MonthsModel.swift */; };
 		BD5FA35B2B218F20002BEBCD /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5FA3592B218F20002BEBCD /* TestViewController.swift */; };
 		BD5FA35C2B218F20002BEBCD /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5FA35A2B218F20002BEBCD /* TestViewController.xib */; };
+		BDB48AD52B4D168000BBBCCE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB48AD32B4D168000BBBCCE /* FilterViewController.swift */; };
+		BDB48AD62B4D168000BBBCCE /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDB48AD42B4D168000BBBCCE /* FilterViewController.xib */; };
+		BDB48AD92B4D16C800BBBCCE /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB48AD72B4D16C800BBBCCE /* FilterTableViewCell.swift */; };
+		BDB48ADA2B4D16C800BBBCCE /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDB48AD82B4D16C800BBBCCE /* FilterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		BD3372C92B3DB6CF0032A602 /* MonthsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthsModel.swift; sourceTree = "<group>"; };
 		BD5FA3592B218F20002BEBCD /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BD5FA35A2B218F20002BEBCD /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		BDB48AD32B4D168000BBBCCE /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		BDB48AD42B4D168000BBBCCE /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		BDB48AD72B4D16C800BBBCCE /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		BDB48AD82B4D16C800BBBCCE /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		BD0BD44D2AE00D5F004E1DD4 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BDB48AD02B4D163A00BBBCCE /* Filter */,
 				BD3372C82B3DB6BF0032A602 /* Model */,
 				BD0BD44E2AE00D5F004E1DD4 /* AppDelegate.swift */,
 				BD0BD4502AE00D5F004E1DD4 /* SceneDelegate.swift */,
@@ -151,6 +160,17 @@
 				BD3372C92B3DB6CF0032A602 /* MonthsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BDB48AD02B4D163A00BBBCCE /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				BDB48AD32B4D168000BBBCCE /* FilterViewController.swift */,
+				BDB48AD42B4D168000BBBCCE /* FilterViewController.xib */,
+				BDB48AD72B4D16C800BBBCCE /* FilterTableViewCell.swift */,
+				BDB48AD82B4D16C800BBBCCE /* FilterTableViewCell.xib */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +277,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB48AD62B4D168000BBBCCE /* FilterViewController.xib in Resources */,
+				BDB48ADA2B4D16C800BBBCCE /* FilterTableViewCell.xib in Resources */,
 				BD0BD45B2AE00D61004E1DD4 /* LaunchScreen.storyboard in Resources */,
 				BD0BD4582AE00D61004E1DD4 /* Assets.xcassets in Resources */,
 				BD5FA35C2B218F20002BEBCD /* TestViewController.xib in Resources */,
@@ -285,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB48AD92B4D16C800BBBCCE /* FilterTableViewCell.swift in Sources */,
 				BD3372C72B3DB69F0032A602 /* MySwiftUIView.swift in Sources */,
 				BD5FA35B2B218F20002BEBCD /* TestViewController.swift in Sources */,
+				BDB48AD52B4D168000BBBCCE /* FilterViewController.swift in Sources */,
 				BD0BD4532AE00D5F004E1DD4 /* ViewController.swift in Sources */,
 				BD0BD47F2AE00D79004E1DD4 /* InputsValidationHelper.swift in Sources */,
 				BD0BD44F2AE00D5F004E1DD4 /* AppDelegate.swift in Sources */,

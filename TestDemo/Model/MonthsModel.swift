@@ -27,18 +27,17 @@ extension Date {
 struct MockData {
     
     let viewMonths = [
-        ViewMonth(date: Date.from(year: 2023, month: 1, day: 2), views: 4500),
-        ViewMonth(date: Date.from(year: 2023, month: 2, day: 3), views: 5550),
-        ViewMonth(date: Date.from(year: 2023, month: 3, day: 4), views: 20599),
-        ViewMonth(date: Date.from(year: 2023, month: 4, day: 5), views: 7655),
-        ViewMonth(date: Date.from(year: 2023, month: 5, day: 6), views: 15846),
-        ViewMonth(date: Date.from(year: 2023, month: 6, day: 9), views: 890),
-        ViewMonth(date: Date.from(year: 2023, month: 7, day: 4), views: 7556),
-        ViewMonth(date: Date.from(year: 2023, month: 8, day: 5), views: 4422),
-        ViewMonth(date: Date.from(year: 2023, month: 9, day: 9), views: 5645),
-        ViewMonth(date: Date.from(year: 2023, month: 10, day: 6 ), views: 8976),
-        ViewMonth(date: Date.from(year: 2023, month: 11, day: 7), views: 1234),
-        ViewMonth(date: Date.from(year: 2023, month: 12, day: 1), views: 12643)
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 21), views: 526700),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 18), views: 14700),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 18), views: 1233),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 27), views: 41866),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 27), views: 55866),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 27), views: 8180),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 27), views: 75866),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 27), views: 85866),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 21), views: 4066),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 21), views: 4366),
+        ViewMonth(date: Date.from(year: 2023, month: 12, day: 21), views: 637000)
     ]
     
 }
