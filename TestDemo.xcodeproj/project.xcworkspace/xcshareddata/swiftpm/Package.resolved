@@ -1,0 +1,60 @@
+{
+  "originHash" : "1f0ff736a1291545760f56549327fbbad168f83c73a7d88751213f42b105377f",
+  "pins" : [
+    {
+      "identity" : "appbase",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/seddiqiholding/AppBase.git",
+      "state" : {
+        "revision" : "eac078c171e2503466bc65cc6f4b5f54ac8ddbd0",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "barcodescanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hyperoslo/BarcodeScanner",
+      "state" : {
+        "revision" : "059cd71c4e3b9efc8d7e42fa1948bf572471b448",
+        "version" : "5.0.1"
+      }
+    },
+    {
+      "identity" : "customswiftuifloatingtextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/seddiqiholding/CustomSwiftUIFloatingTextField.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1a38061aba636571188f4e7f589251f0a7806a3c"
+      }
+    },
+    {
+      "identity" : "nvactivityindicatorview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ninjaprox/NVActivityIndicatorView.git",
+      "state" : {
+        "revision" : "121455c4e630fcb95aaefd7e4257b0c2e3cfe6d5",
+        "version" : "5.2.0"
+      }
+    },
+    {
+      "identity" : "svprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SVProgressHUD/SVProgressHUD.git",
+      "state" : {
+        "revision" : "c33f7c775ba7feea6047a1fc3257f2e5863b44f7",
+        "version" : "2.3.1"
+      }
+    },
+    {
+      "identity" : "swiftentrykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/huri000/SwiftEntryKit.git",
+      "state" : {
+        "revision" : "5ad36cccf0c4b9fea32f4e9b17a8e38f07563ef0",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

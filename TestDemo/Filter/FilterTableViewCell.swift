@@ -34,10 +34,10 @@ class FilterTableViewCell: UITableViewCell {
 
     func handleIsSelected(isSelected: Bool) {
          guard isSelected else {
-            checkedImage?.image = UIImage.unCheck
+//            checkedImage?.image = UIImage.unCheck
             return
         }
-        checkedImage?.image = UIImage.check
+//        checkedImage?.image = UIImage.check
     }
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05FEA9F82D3B69F600840E9B /* MaterialDesignTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA9F72D3B69F600840E9B /* MaterialDesignTextFieldView.swift */; };
+		05FEA9FB2D3B8D1700840E9B /* CustomSwiftUIFloatingTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 05FEA9FA2D3B8D1700840E9B /* CustomSwiftUIFloatingTextField */; };
 		BD0BD44F2AE00D5F004E1DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD44E2AE00D5F004E1DD4 /* AppDelegate.swift */; };
 		BD0BD4512AE00D5F004E1DD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD4502AE00D5F004E1DD4 /* SceneDelegate.swift */; };
 		BD0BD4532AE00D5F004E1DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BD4522AE00D5F004E1DD4 /* ViewController.swift */; };
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05FEA9F72D3B69F600840E9B /* MaterialDesignTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialDesignTextFieldView.swift; sourceTree = "<group>"; };
 		BD0BD44B2AE00D5F004E1DD4 /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0BD44E2AE00D5F004E1DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD0BD4502AE00D5F004E1DD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05FEA9FB2D3B8D1700840E9B /* CustomSwiftUIFloatingTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05FEA9F62D3B69DA00840E9B /* MaterialDesignTextField */ = {
+			isa = PBXGroup;
+			children = (
+				05FEA9F72D3B69F600840E9B /* MaterialDesignTextFieldView.swift */,
+			);
+			path = MaterialDesignTextField;
+			sourceTree = "<group>";
+		};
 		BD0BD4422AE00D5F004E1DD4 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +131,7 @@
 		BD0BD44D2AE00D5F004E1DD4 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				05FEA9F62D3B69DA00840E9B /* MaterialDesignTextField */,
 				BDB48AD02B4D163A00BBBCCE /* Filter */,
 				BD3372C82B3DB6BF0032A602 /* Model */,
 				BD0BD44E2AE00D5F004E1DD4 /* AppDelegate.swift */,
@@ -261,6 +274,9 @@
 				Base,
 			);
 			mainGroup = BD0BD4422AE00D5F004E1DD4;
+			packageReferences = (
+				05FEA9F92D3B8D1700840E9B /* XCRemoteSwiftPackageReference "CustomSwiftUIFloatingTextField" */,
+			);
 			productRefGroup = BD0BD44C2AE00D5F004E1DD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,6 +330,7 @@
 				BD0BD4532AE00D5F004E1DD4 /* ViewController.swift in Sources */,
 				BD0BD47F2AE00D79004E1DD4 /* InputsValidationHelper.swift in Sources */,
 				BD0BD44F2AE00D5F004E1DD4 /* AppDelegate.swift in Sources */,
+				05FEA9F82D3B69F600840E9B /* MaterialDesignTextFieldView.swift in Sources */,
 				BD0BD4512AE00D5F004E1DD4 /* SceneDelegate.swift in Sources */,
 				BD3372CA2B3DB6CF0032A602 /* MonthsModel.swift in Sources */,
 			);
@@ -501,6 +518,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,6 +547,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,6 +677,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05FEA9F92D3B8D1700840E9B /* XCRemoteSwiftPackageReference "CustomSwiftUIFloatingTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/seddiqiholding/CustomSwiftUIFloatingTextField.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05FEA9FA2D3B8D1700840E9B /* CustomSwiftUIFloatingTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05FEA9F92D3B8D1700840E9B /* XCRemoteSwiftPackageReference "CustomSwiftUIFloatingTextField" */;
+			productName = CustomSwiftUIFloatingTextField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD0BD4432AE00D5F004E1DD4 /* Project object */;
 }
