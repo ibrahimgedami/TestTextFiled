@@ -8,17 +8,16 @@
 import SwiftUI
 import CustomSwiftUIFloatingTextField
 
-public protocol MaterialDesignTextFieldStyle {
+public protocol MaterialTextFieldStyle {
     
-    func body(content: MaterialDesignTextField) -> MaterialDesignTextField
+    func body(content: MaterialTextField) -> MaterialTextField
     
 }
 
-public struct MaterialDesignTextField: View {
+public struct MaterialTextField: View {
     
     // MARK: Observed Object
-    @ObservedObject var manager = TextFieldManager()
-    @ObservedObject private var notifier = FloatingLabelTextFieldNotifier()
+    @ObservedObject var notifier = FloatingLabelTextFieldNotifier()
     
     // MARK: Binding Property
     @Binding private var textFieldValue: String
@@ -67,11 +66,11 @@ public struct MaterialDesignTextField: View {
     public var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack(spacing: 15) {
-                TextField("", text: $manager.text)
+                TextField("", text: $textFieldValue)
                     .focused($isTextFieldFocused) // Bind focus state
                     .onChange(of: isTextFieldFocused) { _, isFocused in
                         withAnimation(.easeIn) {
-                            isTapped = true
+                            isTapped = textFieldValue.isEmpty ? isFocused : true
                         }
                         self.isShowError = self.notifier.isRequiredField
                         self.validationChecker = self.currentError.condition
@@ -79,14 +78,17 @@ public struct MaterialDesignTextField: View {
                     }
                     .onSubmit {
                         // Handles return key press
-                        if manager.text == "" {
+                        if textFieldValue.isEmpty {
                             withAnimation(.easeOut) {
                                 isTapped = false
+                                isTextFieldFocused = false
                             }
+                            self.isShowError = self.notifier.isRequiredField
+                            self.validationChecker = self.currentError.condition
+                            self.commit()
+                        } else {
+                            debugPrint("nil")
                         }
-                        self.isShowError = self.notifier.isRequiredField
-                        self.validationChecker = self.currentError.condition
-                        self.commit()
                     }
                     .lineLimit(notifier.lineLimit)
                     .disabled(self.notifier.disabled)
@@ -96,7 +98,6 @@ public struct MaterialDesignTextField: View {
                 
                 if let rightView = notifier.rightView {
                     rightView
-                        .frame(height: 25)
                 }
             }
             .padding(.top, isTapped ? 15 : 0)
@@ -104,74 +105,34 @@ public struct MaterialDesignTextField: View {
                 Text(placeholderText)
                     .scaleEffect(isTapped ? 0.8 : 1)
                     .offset(x: isTapped ? -7 : 0, y: isTapped ? -15 : 0)
-                    .foregroundStyle(isTapped ? .blue : .gray),
+                    .foregroundStyle(isTapped ? notifier.selectedLineColor : notifier.lineColor),
                 alignment: .leading
             )
             .padding(.horizontal)
             
             // Divider
             Rectangle()
-                .fill(isTapped ? .blue : .gray)
+                .fill(isTapped ? notifier.selectedLineColor : notifier.lineColor)
                 .opacity(isTapped ? 1 : 0.5)
                 .frame(height: 1)
                 .padding(.top, 10)
         }
         .padding(.top, 12)
-        .background(Color.gray.opacity(0.09))
+        .background(notifier.backgroundColor)
         .cornerRadius(12)
         
-        // Displaying count
-        HStack {
-            Text("\(manager.text.count) / 15")
-                .font(.caption)
-                .foregroundStyle(.gray)
-                .padding(.leading)
-                .padding(.top, 4)
-            
-            Spacer()
-        }
-    }
-    
-}
-
-#Preview {
-    MaterialDesignTextField(.constant(""),
-                            validationChecker: .constant(true),
-                            placeholder: "User Name",
-                            axis: .vertical) { status in
-        
-    } commit: {
-        
-    }
-    
-    MaterialDesignTextField(.constant(""),
-                            validationChecker: .constant(true),
-                            placeholder: "Full name",
-                            axis: .vertical) { status in
-        
-    } commit: {
-        
-    }
-    
-}
-
-class TextFieldManager: ObservableObject {
-    
-    @Published var text = "" {
-        didSet {
-            if text.count >= 15 && oldValue.count <= 15 {
-                text = oldValue
-            }
+        if let validationView = notifier.validationMessageView {
+            validationView
         }
     }
     
 }
 
 @available(iOS 15.0, *)
-extension MaterialDesignTextField {
+extension MaterialTextField {
     
     // MARK: FloatingLabelTextField Style Function
-    public func floatingStyle<S>(_ style: S) -> some View where S: MaterialDesignTextFieldStyle {
+    public func floatingStyle<S>(_ style: S) -> some View where S: MaterialTextFieldStyle {
         return style.body(content: self)
     }
     
@@ -185,6 +146,12 @@ extension MaterialDesignTextField {
     /// Sets the right view.
     public func rightView<LRView: View>(@ViewBuilder _ view: @escaping () -> LRView) -> Self {
         notifier.rightView = AnyView(view())
+        return self
+    }
+    
+    /// Sets the validationMessage (bottom view) view
+    public func validationMessageView<LRView: View>(@ViewBuilder _ view: @escaping () -> LRView) -> Self {
+        notifier.validationMessageView = AnyView(view())
         return self
     }
     
@@ -300,6 +267,11 @@ extension MaterialDesignTextField {
         return self
     }
     
+    public func backgroundColor(_ color: Color) -> Self {
+        notifier.backgroundColor = color
+        return self
+    }
+    
     // MARK: Error Property Function
     /// Sets the is show error message.
     public func isShowError(_ show: Bool) -> Self {
@@ -352,5 +324,52 @@ extension MaterialDesignTextField {
         notifier.allowsHitTesting = isEnabled
         return self
     }
+    
+}
+
+
+#Preview {
+    @Previewable @State var userName: String = ""
+    @Previewable @State var fullName: String = ""
+    @Previewable @State var showDropdown: Bool = false
+    
+    MaterialTextField($userName, placeholder: "User Name") { _ in } commit: {
+        
+    }
+    
+    MaterialTextField($fullName, placeholder: "Full name")
+        .rightView {
+            Button(action: {
+                showDropdown.toggle()
+            }) {
+                Image(systemName: "chevron.down")
+                    .imageScale(.medium)
+                    .padding(.horizontal)
+                    .foregroundStyle(.white)
+            }
+            .frame(width: 40, height: 40)
+            .background(.blue)
+    //        .clipShape(RoundedCorner(radius: 12, corners: [.bottomRight, .topRight]))
+            .onTapGesture {
+                showDropdown.toggle()
+            }
+            .popover(isPresented: $showDropdown) {
+                VStack {
+                    Text("Text 1")
+                    Text("Text 1")
+                }
+                .background(.red)
+            }
+        }
+        .validationMessageView {
+            HStack {
+                Text("your name shpould be more than 3 char")
+                    .font(.caption)
+                    .foregroundStyle(.red)
+                    .padding(.leading)
+                
+                Spacer()
+            }
+        }
     
 }

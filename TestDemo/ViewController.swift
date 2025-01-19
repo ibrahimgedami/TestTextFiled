@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var customView: UIView?
     @IBOutlet weak var stackView: UIStackView?
-    
     private var hostingController: UIHostingController<ChartTest>?
     
     override func viewDidLoad() {
@@ -25,6 +24,7 @@ class ViewController: UIViewController {
         print(isValidString("Special@"))  // Invalid: Contains a special character
         print(isValidString(""))
         print(isValidString("12345643$&"))
+        
     }
     
     func isValidString(_ input: String) -> Bool {
@@ -37,7 +37,8 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         
-
+        let view = UIHostingController(rootView: MySwiftUIView())
+        present(view, animated: true)
     }
     
 }
