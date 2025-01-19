@@ -121,20 +121,20 @@ public struct MaterialDesignTextField: View {
             Spacer()
         }
     }
-
+    
 }
 
 #Preview {
     
-    MaterialDesignTextField(.constant("User Name"),
+    MaterialDesignTextField(.constant(""),
                             validationChecker: .constant(true),
-                        placeholder: "User Name",
+                            placeholder: "User Name",
                             axis: .vertical) { status in
         
     } commit: {
         
     }
-
+    
 }
 
 class TextFieldManager: ObservableObject {
