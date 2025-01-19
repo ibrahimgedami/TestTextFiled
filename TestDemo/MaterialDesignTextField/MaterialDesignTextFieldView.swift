@@ -13,7 +13,6 @@ struct MaterialDesignTextFieldView: View {
     @State var isTapped = false
     
     var body: some View {
-        VStack {
             VStack(alignment: .leading, spacing: 5) {
                 HStack(spacing: 15) {
                     TextField("", text: $manager.text) { status in
@@ -65,16 +64,14 @@ struct MaterialDesignTextFieldView: View {
             
             // Displaying count
             HStack {
-                Spacer()
-                
                 Text("\(manager.text.count) / 15")
                     .font(.caption)
                     .foregroundStyle(.gray)
-                    .padding(.trailing)
+                    .padding(.leading)
                     .padding(.top, 4)
+                
+                Spacer()
             }
-        }
-        .padding( )
     }
     
 }
